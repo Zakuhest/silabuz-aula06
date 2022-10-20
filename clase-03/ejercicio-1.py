@@ -34,8 +34,6 @@ while val:
                 errormsg = errormsg + (f"{fieldNames[i]} es un campo obligatorio.\n\n")
         if errormsg == "": break
         fieldValues = multenterbox(errormsg, title, fieldNames, fieldValues)
-    # print("Presión:", fieldValues[0])
-    # print("Volumen:", fieldValues[1])
 
     if float(fieldValues[0]) > pThreshold and float(fieldValues[1]) > vThreshold:  # type: ignore
         msgbox("Parado inmediato!", ok_button="Exit")
